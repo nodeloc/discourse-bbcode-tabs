@@ -1,0 +1,5 @@
+en:
+  js:
+    discourse_bbcode_tabs:
+      title: "Discourse BBCode Tabs"
+      description: "Adds support for tabbed content using BBCode [tabs][tab=Title]Content[/tab][/tabs]."

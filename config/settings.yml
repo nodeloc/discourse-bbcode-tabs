@@ -1,0 +1,18 @@
+plugins:
+  bbcode_tabs_enabled:
+    client: true
+    default: true
+    description:
+      en: "Enable the BBCode Tabs plugin"
+    
+  bbcode_tabs_first_tab_active:
+    client: true
+    default: true
+    description:
+      en: "Automatically select the first tab by default"
+      
+  bbcode_tabs_remember_selection:
+    client: true
+    default: true
+    description:
+      en: "Remember the last selected tab between page visits"

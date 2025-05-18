@@ -1,0 +1,111 @@
+.tabs {
+  margin: 25px 0;
+  width: 100%;
+  position: relative;
+  clear: both;
+  min-height: 500px;
+  background-color: var(--primary-very-low);
+
+  .tabs-title {
+    overflow-x: auto;
+    border-bottom: 1px solid var(--primary-low);
+    white-space: nowrap;
+    background-color: var(--secondary);
+  }
+
+  .tab {
+    display: inline-block;
+
+    /* Hide inputs */
+    input[type=radio] {
+      display: none;
+    }
+
+    /* Style the labels */
+    label {
+      display: inline-block;
+      cursor: pointer;
+      padding: 10px 15px 7px;
+      background-color: var(--secondary);
+      border: 1px solid var(--primary-low);
+      border-bottom: none;
+      margin-right: -1px;
+      opacity: 0.85;
+      transition: all 0.2s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &:first-of-type label {
+      border-top-left-radius: 3px;
+    }
+
+    &:last-of-type label {
+      border-top-right-radius: 3px;
+    }
+
+    /* Style the active tab */
+    input:checked + label {
+      opacity: 1;
+      border-bottom: 3px solid var(--tertiary);
+      padding-bottom: 5px;
+      font-weight: bold;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Content styling */
+    .content {
+      display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100%;
+      padding: 15px;
+      border: 1px solid var(--primary-low);
+      border-top: none;
+      background-color: var(--primary-very-low);
+      border-radius: 0 0 3px 3px;
+      z-index: 0;
+
+      p:first-child {
+        margin-top: 0;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      pre code {
+        margin: 0;
+        max-height: 400px;
+      }
+    }
+
+    /* Show active content */
+    input:checked ~ .content {
+      display: block;
+    }
+  }
+}
+
+/* Ensure the tabs work in both light and dark themes */
+.tabs .tab .content {
+  background-color: var(--primary-very-low);
+  color: var(--primary);
+  border-color: var(--primary-low);
+}
+
+/* Make it responsive */
+@media (max-width: 767px) {
+  .tabs .tab label {
+    padding: 8px 10px 5px;
+    font-size: 0.9em;
+  }
+
+  .tabs .tab .content {
+    padding: 10px;
+  }
+}
