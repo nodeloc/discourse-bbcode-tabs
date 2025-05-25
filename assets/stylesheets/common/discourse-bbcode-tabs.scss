@@ -62,7 +62,7 @@
       position: absolute;
       left: 0;
       right: 0;
-      height: 100%;
+      height: calc(100% - 42px);
       padding: 15px;
       border: 1px solid var(--primary-low);
       border-top: none;

@@ -3,7 +3,7 @@
 # name: discourse-bbcode-tabs
 # about: Adds BBCode [tabs][tab=...][/tab][/tabs] support to posts
 # version: 0.1
-# authors: GitHub Copilot
+# authors: James
 # url: https://github.com/discourse/discourse-bbcode-tabs
 # transpile_js: true
 # enabled_site_setting: bbcode_tabs_enabled
